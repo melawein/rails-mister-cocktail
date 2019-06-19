@@ -1,8 +1,12 @@
-<h1>Check out my Cocktails</h1>
+<div class="navbar"> 💜<%= link_to "Add a cocktail", new_cocktail_path, class: "btn btn-outline-info btn-sm btn-open"%> </div>
+
+<div class="banner-index"><h1>Check out my Cocktails</h1></div>
+
+
 
 <% @cocktails.each do |cocktail| %>
 <p> <%= link_to cocktail.name, cocktail_path(cocktail) %> </p>
 <% end %>
 
 
-<%= link_to "Add a cocktail", new_cocktail_path %>
+
