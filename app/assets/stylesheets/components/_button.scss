@@ -1,10 +1,14 @@
 .card-button {
   color: white;
   text-decoration: none;
+  align-items: center;
 
 a:-webkit-any-link {
   text-decoration: none;
-  color: $purple;
+  color: white;
+  &:hover {
+    color: white;
+  }
 }
 
 }
