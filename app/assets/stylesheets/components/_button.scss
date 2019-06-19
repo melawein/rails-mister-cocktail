@@ -13,3 +13,15 @@ a:-webkit-any-link {
 
 }
 
+.show-button {
+  color: $purple;
+
+  a:-webkit-any-link {
+  text-decoration: none;
+  color: $purple;
+  &:hover {
+    color: white;
+  }
+}
+
+}
