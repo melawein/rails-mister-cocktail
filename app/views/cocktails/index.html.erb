@@ -5,6 +5,8 @@
     params[:query],
     class: "search-form",
     placeholder: "Find a cocktail"%>
+
+
 <% end %>
 <%= link_to "Add a cocktail", new_cocktail_path, class: "btn btn-outline-info btn-sm btn-open ml-2"%>
 </div>
@@ -22,7 +24,7 @@
     <% @cocktails.each do |cocktail| %>
     <div class="col-xs-12 col-sm-6 col-md-4 cocktail-card">
       <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path cocktail.photo, crop: :limit %>')">
-        <p> <%= cocktail.name %>  </p>
+        <p id="cocktail-name"> <%= cocktail.name %>  </p>
         <p class="card-button btn btn-outline-info btn-sm"><%=link_to "More info", cocktail_path(cocktail) %> </p>
       </div>
     </div>
