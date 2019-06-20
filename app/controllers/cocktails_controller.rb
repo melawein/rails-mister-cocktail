@@ -1,7 +1,11 @@
 class CocktailsController < ApplicationController
   before_action :set_cocktails, only: [:show]
   def index
-    @cocktails = Cocktail.all
+    if params[:query].present?
+      @cocktails = Cocktail.where(name: params[:query])
+    else
+      @cocktails = Cocktail.all
+    end
   end
 
   def show

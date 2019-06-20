@@ -25,3 +25,19 @@ a:-webkit-any-link {
 }
 
 }
+
+
+#button-back {
+  color: white;
+  text-decoration: none;
+  align-items: center;
+  text-align: center;
+
+a:-webkit-any-link {
+  text-decoration: none;
+  color: white;
+  &:hover {
+    color: white;
+  }
+}
+}
