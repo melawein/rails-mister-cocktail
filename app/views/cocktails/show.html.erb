@@ -1,9 +1,8 @@
 <div class="navbar"> 💜<%= link_to "Add a cocktail", new_cocktail_path, class: "btn btn-outline-info btn-sm btn-open"%> </div>
 
 <div class="banner-show">
-  <div class="container">
+  <%= cl_image_tag @cocktail.photo %>
     <h1><h1><%= @cocktail.name %></h1></h1>
-  </div>
 </div>
 
 
@@ -12,13 +11,17 @@
 
   <h2>Ingredients</h2>
 
+<div class="card-ingredient">
   <% @cocktail.doses.each do |dose| %>
     <p> <%= dose.ingredient.name %> - <%= dose.description %>  <%= link_to "🗑", dose_path(dose), method: :delete, data: {:confirm => "Are you sure you want to delete ?"} %> </p>
   <% end %>
+</div>
 
 
   <p class="show-button btn btn-outline-info btn-sm"> <%= link_to "Add an ingredient", new_cocktail_dose_path(@cocktail)  %></p>
 
+
+  <p class="show-button btn btn-outline-info btn-sm"><%= link_to "Delete this Cocktail", cocktail_path(@cocktail), method: :delete, data: {:confirm => "Are you sure you want to delete ?"} %> </p>
 
   <p class="show-button btn btn-outline-info btn-sm"><%= link_to "Back", cocktails_path  %></p>
 </div>

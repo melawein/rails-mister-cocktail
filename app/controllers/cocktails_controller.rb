@@ -23,6 +23,12 @@ class CocktailsController < ApplicationController
     end
   end
 
+  def destroy
+    @cocktail = Cocktail.find(params[:id])
+    @cocktail.destroy
+    redirect_to cocktails_path
+  end
+
   private
 
   def set_cocktails
@@ -30,6 +36,6 @@ class CocktailsController < ApplicationController
   end
 
   def set_params
-    params.require(:cocktail).permit(:name)
+    params.require(:cocktail).permit(:name, :photo)
   end
 end
