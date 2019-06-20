@@ -20,11 +20,11 @@
 
 
 <div class="container">
-  <div class="row mt-5 mb-5">
+  <div class="row my-5">
     <% @cocktails.each do |cocktail| %>
-    <div class="col-xs-12 col-sm-6 col-md-4 cocktail-card">
+    <div class="col-xs-12 col-sm-6 col-md-4 mb-3 cocktail-card">
       <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path cocktail.photo, crop: :limit %>')">
-        <p id="cocktail-name"> <%= cocktail.name %>  </p>
+        <p id="cocktail-name" style="font-family: 'Mali', cursive;"> <%= cocktail.name %>  </p>
         <p class="card-button btn btn-outline-info btn-sm"><%=link_to "More info", cocktail_path(cocktail) %> </p>
       </div>
     </div>
