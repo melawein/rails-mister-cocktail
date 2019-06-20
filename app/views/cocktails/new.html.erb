@@ -1,3 +1,5 @@
+<div class="newform-background">
+<div class="container mt-5" id="form-container">
 <h1>Add a new cocktail</h1>
 
 <%= simple_form_for(@cocktail) do |f|  %>
@@ -6,4 +8,4 @@
 <%= f.submit %>
 <% end  %>
 
-<p class="show-button btn btn-outline-info btn-sm"><%= link_to "Back", cocktails_path %></p>
+<p class="form-button btn btn-warning btn-sm mt-3"><%= link_to "Back", cocktails_path %></p>

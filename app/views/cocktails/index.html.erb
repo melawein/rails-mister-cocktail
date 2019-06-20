@@ -1,11 +1,12 @@
-<div class="navbar"> 💜
+<div class="navbar"> <p class="flex-fill">💜</p>
+  <p class="glass mt-3">🔍</p>
 <%= form_tag cocktails_path, method: :get do %>
   <%= text_field_tag :query,
     params[:query],
     class: "search-form",
     placeholder: "Find a cocktail"%>
 <% end %>
-<%= link_to "Add a cocktail", new_cocktail_path, class: "btn btn-outline-info btn-sm btn-open"%>
+<%= link_to "Add a cocktail", new_cocktail_path, class: "btn btn-outline-info btn-sm btn-open ml-2"%>
 </div>
 
 <div class="banner-index">
