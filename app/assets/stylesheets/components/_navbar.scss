@@ -1,6 +1,7 @@
 .navbar {
   justify-content: space-between;
   background: white;
+  height: 60px;
 }
 
 .navbar-lewagon {
@@ -10,4 +11,11 @@
 
 .navbar-lewagon-white {
   background-color: white;
+}
+
+.heart {
+  text-decoration: none;
+  &:hover {
+    text-decoration: none;
+  }
 }
